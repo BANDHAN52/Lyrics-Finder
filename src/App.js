@@ -29,7 +29,7 @@ function App() {
                 placeholder='Song name'
                 onChange={(e) => { setSong(e.target.value) }} />
             
-            <a className="my-super-cool-btn" onClick={(e) => {
+            <div className="my-super-cool-btn" onClick={(e) => {
                 e.preventDefault();
                 searchLyrics();
             }}>
@@ -40,7 +40,7 @@ function App() {
                     <div className="dot"></div>
                 </div>
                 <span>Go!</span>
-            </a>
+            </div>
             
             <hr />
             <pre>{lyrics}</pre>
