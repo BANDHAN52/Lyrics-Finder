@@ -2,7 +2,7 @@
 
 ![Logo](output.png)
 
-- Live - <https://realtime-chatroomss.netlify.app>
+- Live - <https://lyrics-finder3.netlify.app/>
 
 
 ## Authors
