@@ -29,7 +29,7 @@ function App() {
                 placeholder='Song name'
                 onChange={(e) => { setSong(e.target.value) }} />
             
-            <a href="#" className="my-super-cool-btn" onClick={(e) => {
+            <a className="my-super-cool-btn" onClick={(e) => {
                 e.preventDefault();
                 searchLyrics();
             }}>
