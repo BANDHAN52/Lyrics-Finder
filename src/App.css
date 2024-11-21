@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+.App {
+    min-height: 100vh;
+    height: auto;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: "Jost medium", cursive;
+    color: #e1001a;
+    
+}
+
+pre {
+    font-size: 24px;
+    color: #113a5d;
+}
+
+hr {
+    width: 500px;
+    height: 2px;
+    background-color: #F3CF14;
+    border: none;
+    margin: 20px auto;
+}
+
+.inp {
+    width: 200px;
+    height: 40px;
+    border: 2px solid #113a5d;
+    margin: 0px 10px;
+    padding-left: 6px;
+    font-size: 22px;
+}
+
+.btn {
+    width: 90px;
+    height: 60px;
+}
+
+.my-super-cool-btn {
+  position: relative;
+  text-decoration: none;
+  color: #ffffff;
+  letter-spacing: 1px;
+  font-size: 2rem;
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.my-super-cool-btn span {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  z-index: 2;
+}
+
+.my-super-cool-btn span:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  border: 7px solid #F3CF14;
+  box-sizing: border-box;
+  transition: all .85s cubic-bezier(0.25, 1, 0.33, 1);
+  box-shadow: 0 30px 85px rgba(0,0,0,0.14), 0 15px 35px rgba(0,0,0,0.14);
+  z-index: -1;
+}
+
+.my-super-cool-btn:hover span:before {
+  transform: scale(0.8);
+  box-shadow: 0 20px 55px rgba(0,0,0,0.14), 0 15px 35px rgba(0,0,0,0.14);
+}
+
+.my-super-cool-btn .dots-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  z-index: 1;
+}
+
+.my-super-cool-btn .dot {
+  width: 8px;
+  height: 8px;
+  display: block;
+  background-color: #F3CF14;
+  border-radius: 100%;
+  position: absolute;
+  transition: all .85s cubic-bezier(0.25, 1, 0.33, 1);
+}
+
+.my-super-cool-btn .dot:nth-child(1) {
+  top: 25px;
+  left: 25px;
+  transform: rotate(-140deg);
+  animation: swag1-out 0.3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.my-super-cool-btn .dot:nth-child(2) {
+  top: 25px;
+  right: 25px;
+  transform: rotate(140deg);
+  animation: swag2-out 0.3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.my-super-cool-btn .dot:nth-child(3) {
+  bottom: 25px;
+  left: 25px;
+  transform: rotate(140deg);
+  animation: swag3-out 0.3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.my-super-cool-btn .dot:nth-child(4) {
+  bottom: 25px;
+  right: 25px;
+  transform: rotate(-140deg);
+  animation: swag4-out 0.3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.my-super-cool-btn:hover .dot:nth-child(1) {
+  animation: swag1 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.my-super-cool-btn:hover .dot:nth-child(2) {
+  animation: swag2 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.my-super-cool-btn:hover .dot:nth-child(3) {
+  animation: swag3 0.3s;
+  animation-fill-mode: forwards;
+}
+
+.my-super-cool-btn:hover .dot:nth-child(4) {
+  animation: swag4 0.3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes intro {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes swag1 {
+  0% { top: 25px; left: 25px; width: 8px; }
+  50% { width: 30px; opacity: 1; }
+  100% { top: 10px; left: 10px; width: 8px; opacity: 1; }
+}
+
+@keyframes swag1-out {
+  0% { top: 10px; left: 10px; width: 8px; }
+  50% { width: 30px; opacity: 1; }
+  100% { top: 25px; left: 25px; width: 8px; opacity: 0; }
+}
+
+@keyframes swag2 {
+  0% { top: 25px; right: 25px; width: 8px; }
+  50% { width: 30px; opacity: 1; }
+  100% { top: 10px; right: 10px; width: 8px; opacity: 1; }
+}
+
+@keyframes swag2-out {
+  0% { top: 10px; right: 10px; width: 8px; }
+  50% { width: 30px; opacity: 1; }
+  100% { top: 25px; right: 25px; width: 8px; opacity: 0; }
+}
+
+@keyframes swag3 {
+  0% { bottom: 25px; left: 25px; width: 8px; }
+  50% { width: 30px; opacity: 1; }
+  100% { bottom: 10px; left: 10px; width: 8px; opacity: 1; }
+}
+
+@keyframes swag3-out {
+  0% { bottom: 10px; left: 10px; width: 8px; }
+  50% { width: 30px; opacity: 1; }
+  100% { bottom: 25px; left: 25px; width: 8px; opacity: 0; }
+}
+
+@keyframes swag4 {
+  0% { bottom: 25px; right: 25px; width: 8px; }
+  50% { width: 30px; opacity: 1; }
+  100% { bottom: 10px; right: 10px; width: 8px; opacity: 1; }
+}
+
+@keyframes swag4-out {
+  0% { bottom: 10px; right: 10px; width: 8px; }
+  50% { width: 30px; opacity: 1; }
+  100% { bottom: 25px; right: 25px; width: 8px; opacity: 0; }
+}
